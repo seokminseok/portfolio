@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>이석민 포토폴리오</title>
+
+    <link type="text/css" rel="stylesheet" href="/assets/styles/page.css">
+    <script defer src="/assets/scripts/index.js"></script>
+</head>
+<body>
+
+<section class="header-box" id="header">
+    <div class="header-text-title"><a href="#middle">Home</a></div>
+    <div class="stretch"></div>
+    <div class="header-text"><a href="#about">About</a></div>
+    <div class="header-text"><a href="#skill">Skills</a></div>
+    <div class="header-text"><a href="#contact">Contact</a></div>
+</section>
+
+<section class="middle-box" id="middle">
+    <div class="middle-text">
+        <h1>
+            <span class="color-text">Hello, I'm</span><br>
+            <span class="event-text" id="dynamic-text"></span>
+        </h1>
+        <p class="p">안녕하세요. 성장과 혁신을 지향하는 개발자, 이석민입니다.</p>
+    </div>
+    <img src="/assets/photo/2.jpg" alt="my-image" class="my-image">
+</section>
+
+<section class="skills-section" id="skill">
+    <h2 class="about">SKILLS</h2>
+    <div class="skills-container">
+        <!-- Frontend Section -->
+        <div class="skill-card">
+            <h3>Frontend</h3>
+            <div class="skill-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML" class="skill-icon">
+                <p>HTML</p>
+            </div>
+            <div class="skill-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS" class="skill-icon">
+                <p>CSS</p>
+            </div>
+            <div class="skill-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript" class="skill-icon">
+                <p>JavaScript</p>
+            </div>
+        </div>
+
+        <!-- Backend Section -->
+        <div class="skill-card">
+            <h3>Backend</h3>
+            <div class="skill-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/919/919854.png" alt="Java" class="skill-icon">
+                <p>Java</p>
+            </div>
+            <div class="skill-item">
+                <img src="https://img.icons8.com/color/48/spring-logo.png" alt="Spring Boot" class="skill-icon">
+                <p>Spring Boot</p>
+            </div>
+        </div>
+
+        <!-- Database Section -->
+        <div class="skill-card">
+            <h3>Database</h3>
+            <div class="skill-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/528/528260.png" alt="MariaDB" class="skill-icon">
+                <p>MariaDB</p>
+            </div>
+        </div>
+
+        <!-- OS Section -->
+        <div class="skill-card">
+            <h3>Operating System</h3>
+            <div class="skill-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/226/226772.png" alt="Linux" class="skill-icon">
+                <p>Linux</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="about-section" id="about">
+    <h2 class="about">About Me</h2>
+    <div class="about-content">
+        <div class="icon">
+            <img src="/assets/photo/icon.png" alt="icon" class="icon-image">
+        </div>
+        <div class="text-section">
+            <ul class="about-list">
+                <li class="about-text">
+                    <span class="bullet">✓</span>BE Enginner 지만 FE를 지향하려고 해요.
+                </li>
+                <li class="about-text">
+                    <span class="bullet">✓</span> 코드의 가독성을 최우선으로 생각하며 개발해요.
+                </li>
+                <li class="about-text">
+                    <span class="bullet">✓</span> 문제 해결을 위한 효율적인 알고리즘을 선택해요.
+                </li>
+                <li class="about-text">
+                    <span class="bullet">✓</span> 지속적인 학습과 기술 트렌드를 따라가며 발전해요.
+                </li>
+            </ul>
+
+            <div class="event">
+                <div class="container">
+                    <label class="action">
+                        <input id="career-radio" name="action-text" type="radio" value="career" class="radio">
+                        <span class="text">Careers</span>
+                        <div class="underline"></div>
+                    </label>
+                    <label class="action">
+                        <input id="education-radio" name="action-text" type="radio" value="education" class="radio">
+                        <span class="text">Education</span>
+                        <div class="underline"></div>
+                    </label>
+                </div>
+                <div class="content-container">
+                    <label class="content" id="career-content">
+                        <input type="text" class="comment-container" value="2020.01.16 ~ 2023.12.31  |  (주) 명성"
+                               readonly>
+                    </label>
+                    <label class="content" id="education-content" style="display: none;">
+                        <input type="text" class="comment-container"
+                               value="2024.08.30 ~ 2025.01.20     |   임베디드 소프트웨어 융합 풀스택 개발자 양성 과정" readonly>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<h2 class="about">My Project</h2>
+<section class="project-section">
+    <div class="card">
+        <a href="https://chalk-jonquil-2ab.notion.site/11162de1c7f1812ba30ce7495734f718" target="_blank">
+            <img src="/assets/photo/project.png" alt="소개" class="project-img">
+        </a>
+    </div>
+    <div class="card-write">
+    <p>알림 기능: WebSocket과 STOMP 프로토콜을 활용하여 실시간 알림을 전송하고, mapper를 사용하여 알림 데이터를 데이터베이스에 저장 후 조회 기능을 구현.</p>
+    <p>신고 기능: Spring Boot의 RESTful API로 신고 데이터 처리 1분마다 자동 실행되는 scheduler로 빠르고 효율적인 신고 처리가 가능.</p>
+    <p>이메일 전송 기능: QnA에서 `JavaMailSender`를 사용하여 사용자에게 이메일을 자동 발송</p>
+    <p>찜하기 기능: JPA를 활용하여 찜한 항목을 데이터베이스에 저장하고 조회하며, JavaScript로 UI에서 실시간으로 찜한 항목을 표시.</p>
+    </div>
+    <!--    <div class="card">-->
+    <!--       이미지 준비 중 입니다!-->
+    <!--    </div>-->
+</section>
+
+<h2 class="about">Contact</h2>
+<section class="contact-section" id="contact">
+    <div class="contact">
+        <p></p>
+        <p>📞 연락처: 010-3444-7689</p>
+        <p>✉️ 이메일: dltjrals1018@naver.com</p>
+    </div>
+    <div class="form-container">
+        <form action="/mail/send" method="post">
+            <label>
+                <span class="input-text">Name</span>
+                <input type="text" name="name" placeholder="성함을 입력해 주세요!" required/>
+            </label>
+            <label>
+                <span>Email</span>
+                <input type="email" name="email" placeholder="이메일을 입력해 주세요!" required/>
+            </label>
+            <label>
+                <span>Content</span>
+                <textarea name="content" placeholder="내용을 입력해 주세요!" required></textarea>
+            </label>
+            <button type="submit">Send</button>
+        </form>
+
+    </div>
+</section>
+
+<section>
+    <div class="icon-container">
+        <div class="icons">
+            <!-- GitHub -->
+            <a href="https://github.com/seokminseok" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub">
+            </a>
+            <!-- Notion -->
+            <a href="https://chalk-jonquil-2ab.notion.site/11162de1c7f180d9b3acdb0484a21ffc" target="_blank">
+                <img src="/assets/photo/Notion-removebg-preview.png" alt="Notion">
+            </a>
+            <!-- Tistory -->
+            <!--            <a href="https://my-ai.tistory.com/" target="_blank">-->
+            <!--                <img src="https://t1.daumcdn.net/tistory_admin/static/top/favicon_0630.ico" alt="Tistory">-->
+            <!--            </a>-->
+        </div>
+    </div>
+</section>
+
+<div class="under">
+    <p> © 2024. Lee Seok Min. All rights reserved.</p>
+</div>
+
+</body>
+</html>
