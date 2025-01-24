@@ -4,6 +4,7 @@
 html {
     scroll-behavior: smooth;
 }
+
 body {
     top: 0;
     left: 0;
@@ -190,7 +191,7 @@ body {
     margin: 0 auto;
 }
 
-.icon {
+.about-icon {
     flex: 1;
     display: flex;
     justify-content: center;
@@ -199,9 +200,11 @@ body {
 }
 
 .icon-image {
-    width: 100%;
+    width: 93%;
     max-width: 100%;
-    margin-left: 15rem;
+    /*margin-left: 10rem;*/
+    margin: 0 0 6rem 8rem ;
+
     height: auto;
     /*object-fit: contain;*/
 }
@@ -227,7 +230,7 @@ body {
 
 .bullet {
     color: #007bff;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     margin-right: 0.5rem;
 }
 
@@ -251,6 +254,7 @@ body {
     color: black;
     display: inline-block; /* 텍스트와 underline을 같은 줄에 배치 */
     margin-bottom: 0.6rem;
+    cursor: pointer;
 }
 
 .underline {
@@ -288,6 +292,7 @@ body {
 }
 
 
+
 /* =================== 아이콘 section =================== */
 .icons {
     margin-top: 5rem;
@@ -314,57 +319,124 @@ body {
 }
 
 /* --------------- 프로젝트 section -------------- */
-.project-h2 {
-    font-size: 10rem;
-    text-align: center;
-    margin-bottom: 10rem;
-}
-
 .project-section {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
-    padding: 2rem;
-    justify-items: center; /* 카드들을 수평 중앙 정렬 */
-}
-
-.card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    width: 65%; /* 카드 너비 조정 */
-    height: 20rem; /* 카드 높이는 그대로 유지 */
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     justify-content: center;
-    align-items: center; /* 카드 내용 중앙 정렬 */
+    align-items: center;
+    padding: 2rem;
+    margin-top: 5rem;
+    /*background-color: #f9f9f9;*/
 }
 
-.card:hover {
-    transform: scale(1.1);
+/* 프로젝트 컨테이너 */
+.project-container {
+    display: flex;
+    flex-wrap: wrap; /* 모바일 대응 */
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 이미지 영역 */
+.project-image {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+    background-color: #eef2f3;
+    padding: 1rem;
 }
 
 .project-img {
-    width: 70%;
-    height: 70%;
-    object-fit: contain; /* 이미지가 비율에 맞게 카드 안에 맞춰짐 */
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
 }
-.card-write{
+
+/* 텍스트 영역 */
+.project-details {
+    flex: 2;
+    min-width: 300px;
+    padding: 2rem;
+    transition: trasnform 0.3s ease;
+}
+
+.project-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.project-details p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.project-link a {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
 
 }
 
-/*------------------------contact-------------------*/
+.project-details img {
+    transition: transform 0.3s ease;
+    margin: 1rem;
+}
+
+.project-details img:hover {
+    transform: scale(1.15);
+}
+
+
+
+.project-details {
+    transition: transform 0.3s ease;
+}
+
+
+/*반응형 스타일 */
+@media (max-width: 768px) {
+    .project-container {
+        flex-direction: column; /* 이미지와 텍스트가 위아래로 배치 */
+    }
+
+    .project-details {
+        padding: 1.5rem;
+    }
+
+    .project-title {
+        font-size: 1.5rem;
+    }
+
+    .project-details p {
+        font-size: 0.95rem;
+    }
+}
+
 /* 전체 연락처 섹션 */
 .contact-section {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3rem; /* 두 영역 사이에 간격 추가 */
-    padding: 4rem 2rem; /* 섹션의 패딩 추가 */
-    max-width: 1200px; /* 최대 너비 설정 */
-    margin: 0 auto; /* 섹션을 중앙에 배치 */
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem; /* 두 영역 사이 간격 */
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    /*border-radius: 10px; !* 둥근 모서리 *!*/
+    /*box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); !* 섹션 그림자 *!*/
 }
 
 /* 연락처 정보 스타일 */
@@ -372,61 +444,101 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    gap: 1rem; /* 연락처 항목 사이에 간격 추가 */
+    align-items: flex-start;
+    gap: 1.5rem; /* 연락처 항목 간 간격 */
     font-size: 1.2rem;
-    color: #333; /* 글자 색상 */
-    margin-bottom: 5rem;
+    color: #333;
+    margin-left: 3rem;
+}
+
+.contact p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* 아이콘과 텍스트 간 간격 */
 }
 
 /* 폼 컨테이너 */
 .form-container {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem; /* 입력 필드 간의 간격 */
+    justify-content: center;
     width: 100%;
-    margin-left: 1rem;
+    padding: 2rem;
+    background-color: white; /* 폼 배경 */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 폼 그림자 */
 }
 
 /* 폼 스타일 */
 form {
     display: flex;
     flex-direction: column;
-    gap: 1.2rem; /* 라벨과 입력 필드 간의 간격 */
+    gap: 1.5rem; /* 입력 필드 간 간격 */
 }
 
 .input-text {
-    margin-bottom: 10rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
 }
 
-/* 각 입력 필드 스타일 */
+/* 입력 필드 스타일 */
 input, textarea {
-    padding: 0.8rem;
+    padding: 1rem;
     font-size: 1rem;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 8px;
     width: 100%;
-    box-sizing: border-box; /* 패딩 포함 너비 계산 */
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+    outline: none;
 }
 
 /* 버튼 스타일 */
 button {
-    padding: 0.8rem 2rem;
+    padding: 1rem 2rem;
     font-size: 1.2rem;
+    font-weight: bold;
     background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 button:hover {
-    background-color: #0056b3; /* 버튼 호버 효과 */
+    background-color: #0056b3;
+    transform: scale(1.05); /* 버튼 확대 효과 */
 }
 
+button:active {
+    transform: scale(1);
+}
 
-/* =================== Menu Section =================== */
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .contact-section {
+        grid-template-columns: 1fr; /* 모바일에서 한 열로 정렬 */
+        gap: 2rem;
+    }
+
+    .contact {
+    }
+    }
+
+
+
+        /* =================== Menu Section =================== */
 .menu {
     position: relative;
     display: flex;
@@ -456,4 +568,9 @@ button:hover {
 .under {
     margin-top: 5rem;
     text-align: center;
+}
+
+.stretch {
+    flex-grow: 1;
+    background: black;
 }

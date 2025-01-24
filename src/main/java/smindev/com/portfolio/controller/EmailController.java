@@ -39,11 +39,6 @@ public class EmailController {
                     "Email: " + email.getEmail() + "\n" +
                     "Content: " + email.getContent()); // 이메일 내용
 
-            // 이메일 정보 로깅
-            System.out.println("Email sent: " + email);
-            System.out.println("Recipient: " + email.getEmail());
-            System.out.println("Content: " + email.getContent());
-
             // 이메일 데이터 저장 (DB 저장)
             sentEmailRepository.save(email);
 

@@ -78,6 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     .then(response => response.json())
                     .then(data => {
                         alert("전송에 성공 했습니다 감사합니다!");
+                       location.href = location.href;
                     })
                     .catch(error => {
                         console.error('Error:', error);
@@ -87,11 +88,11 @@ document.addEventListener("DOMContentLoaded", function () {
             console.error('폼을 찾을 수 없습니다.');
         }
     });
-    document.querySelectorAll('a[href="#skill"]').forEach(link => {
+    document.querySelectorAll('a[href="#project"]').forEach(link => {
         link.addEventListener('click', function (event) {
             event.preventDefault(); // 기본 동작 방지
 
-            const target = document.querySelector('#skill');
+            const target = document.querySelector('#project');
             if (target) {
                 target.scrollIntoView({
                     behavior: 'smooth', // 부드럽게 스크롤

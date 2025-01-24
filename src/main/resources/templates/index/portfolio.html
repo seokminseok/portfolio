@@ -16,7 +16,7 @@
     <div class="header-text-title"><a href="#middle">Home</a></div>
     <div class="stretch"></div>
     <div class="header-text"><a href="#about">About</a></div>
-    <div class="header-text"><a href="#skill">Skills</a></div>
+    <div class="header-text"><a href="#project">Project</a></div>
     <div class="header-text"><a href="#contact">Contact</a></div>
 </section>
 
@@ -26,7 +26,7 @@
             <span class="color-text">Hello, I'm</span><br>
             <span class="event-text" id="dynamic-text"></span>
         </h1>
-        <p class="p">안녕하세요. 성장과 혁신을 지향하는 개발자, 이석민입니다.</p>
+        <p class="p">안녕하세요 . 성장과 혁신을 지향하는 개발자, 이석민입니다.</p>
     </div>
     <img src="/assets/photo/2.jpg" alt="my-image" class="my-image">
 </section>
@@ -87,7 +87,7 @@
 <section class="about-section" id="about">
     <h2 class="about">About Me</h2>
     <div class="about-content">
-        <div class="icon">
+        <div class="about-icon">
             <img src="/assets/photo/icon.png" alt="icon" class="icon-image">
         </div>
         <div class="text-section">
@@ -134,50 +134,53 @@
     </div>
 </section>
 
-<h2 class="about">My Project</h2>
+<h2 class="about" id="project">My Project</h2>
 <section class="project-section">
-    <div class="card">
-        <a href="https://chalk-jonquil-2ab.notion.site/11162de1c7f1812ba30ce7495734f718" target="_blank">
+    <div class="project-container">
+        <div class="project-image">
             <img src="/assets/photo/project.png" alt="소개" class="project-img">
-        </a>
+        </div>
+        <div class="project-details">
+            <h2 class="project-title">축제 정보 제공 플랫폼</h2>
+            <p>축제 정보 제공과 후기를 남기는 사이트입니다.</p>
+            <p>게시글 작성, 댓글 작성, 찜하기 기능을 제공하여 사용자가 축제 정보를 상호작용할 수 있도록 합니다.</p>
+            <p>게시글과 댓글 신고 기능, Q&A 게시판과 알림 기능을 통해 실시간 소통을 지원합니다.</p>
+            <p>사용자 맞춤형 기능을 제공하여 개인화된 축제 정보를 제공합니다.</p>
+                <a href="https://github.com/seokminseok/project" target="_blank"><img width="48" height="48" src="https://img.icons8.com/material-rounded/48/github.png" alt="github"/></a>
+            <a href="https://fave.smindev.com">
+            <img width="50" height="50" src="https://img.icons8.com/ios/50/link--v1.png" alt="link--v1"/>
+            </a>
+        </div>
     </div>
-    <div class="card-write">
-    <p>알림 기능: WebSocket과 STOMP 프로토콜을 활용하여 실시간 알림을 전송하고, mapper를 사용하여 알림 데이터를 데이터베이스에 저장 후 조회 기능을 구현.</p>
-    <p>신고 기능: Spring Boot의 RESTful API로 신고 데이터 처리 1분마다 자동 실행되는 scheduler로 빠르고 효율적인 신고 처리가 가능.</p>
-    <p>이메일 전송 기능: QnA에서 `JavaMailSender`를 사용하여 사용자에게 이메일을 자동 발송</p>
-    <p>찜하기 기능: JPA를 활용하여 찜한 항목을 데이터베이스에 저장하고 조회하며, JavaScript로 UI에서 실시간으로 찜한 항목을 표시.</p>
-    </div>
-    <!--    <div class="card">-->
-    <!--       이미지 준비 중 입니다!-->
-    <!--    </div>-->
 </section>
 
-<h2 class="about">Contact</h2>
-<section class="contact-section" id="contact">
+
+
+<h2 class="about" id="contact">Contact</h2>
+<section class="contact-section" >
     <div class="contact">
-        <p></p>
-        <p>📞 연락처: 010-3444-7689</p>
-        <p>✉️ 이메일: dltjrals1018@naver.com</p>
+        <p>📞 010-3444-7689</p>
+        <p>✉️ dltjrals1018@naver.com</p>
     </div>
     <div class="form-container">
         <form action="/mail/send" method="post">
             <label>
                 <span class="input-text">Name</span>
-                <input type="text" name="name" placeholder="성함을 입력해 주세요!" required/>
+                <input type="text" name="name" placeholder="성함을 입력해 주세요!" required />
             </label>
             <label>
-                <span>Email</span>
-                <input type="email" name="email" placeholder="이메일을 입력해 주세요!" required/>
+                <span class="input-text">Email</span>
+                <input type="email" name="email" placeholder="이메일을 입력해 주세요!" required />
             </label>
             <label>
-                <span>Content</span>
+                <span class="input-text">Content</span>
                 <textarea name="content" placeholder="내용을 입력해 주세요!" required></textarea>
             </label>
             <button type="submit">Send</button>
         </form>
-
     </div>
 </section>
+
 
 <section>
     <div class="icon-container">
