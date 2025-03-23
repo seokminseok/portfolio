@@ -1,114 +1,181 @@
 @charset "UTF-8";
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
 
+/* 기본 셋팅 */
+* {
+    box-sizing: border-box;
+    font-family: "Pretendard Variable", sans-serif;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    top: 0;
-    left: 0;
     margin: 0;
     padding: 0;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    font-family: "Pretendard Variable", sans-serif;
-    background-color: white;
-    overflow: auto;
+    background-color: #fff;
+    font-size: 18px;
 }
 
-* {
-    font-family: "Pretendard Variable", sans-serif;
-}
-
-.about {
-    font-size: 3rem;
-    text-align: center;
-    margin-top: 17rem;
-
-}
-
-/* =================== 헤더 section =================== */
+/* 헤더 */
 .header-box {
     display: flex;
     align-items: center;
-    padding: 0.5rem 6rem;
+    padding: 1.5rem 2rem;
     background-color: black;
-    border: none;
-    height: auto;
     position: fixed;
-    width: 92%;
-    z-index: 1;
+    width: 100%;
+    z-index: 10;
 }
 
-.header-text-title a,
-.header-text a {
+.header-text-title a, .header-text a {
     text-decoration: none;
     color: #dddddd;
 }
 
 .header-text-title a {
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
-.header-text {
-    margin-left: 2rem;
+.nav-links {
+    display: flex;
+    gap: 2rem;
 }
 
-.stretch {
-    flex-grow: 1;
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
 }
 
-/*---------------------중간 section------------------*/
+.menu-toggle span {
+    background-color: #dddddd;
+    height: 3px;
+    width: 25px;
+    margin: 4px 0;
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+    .header-box {
+        justify-content: space-between;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .header-text-title {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+
+    .header-text-title a {
+        font-size: 2.5rem;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: black;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+}
+
+/* 중간 섹션 */
 .middle-box {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 5rem;
-    height: 30rem;
-    margin-bottom: 13rem;
-}
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 5rem 2rem;
+    text-align: center;
 
-.middle-text {
-    margin-top: 6rem;
-}
-
-.color-text, .event-text {
-    font-size: 7rem;
-    line-height: 1.2;
-    margin-left: 2rem;
-}
-
-.event-text-wrapper {
-    display: inline-block;
-    width: 15ch;
-    overflow: hidden;
-    vertical-align: middle;
-}
-
-.event-text {
-    display: inline;
-    white-space: nowrap;
-}
-
-.p {
-    position: absolute;
-    padding-top: 4rem;
-    top: 28rem;
-    left: 7rem;
-    font-size: 1.5rem;
 }
 
 .my-image {
     width: 25rem;
     height: 25rem;
-    object-fit: cover;
     border-radius: 50%;
-    position: absolute;
-    right: 5rem;
-    top: 11rem;
+    object-fit: cover;
+    margin: 3rem;
 }
+
+.event-text-wrapper {
+    min-width: 20ch;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.color-text, .event-text {
+    font-size: 4rem;
+}
+
+.p {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+/* About 제목 */
+.about {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-top: 8rem;
+}
+
+/* About 섹션 */
+.about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 2rem;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    align-items: center;
+    width: 80%;
+}
+
+.about-icon {
+    flex-shrink: 0;
+}
+
+.icon-image {
+    width: 350px;
+    height: auto;
+}
+
+/* 반응형에서도 이미지 크기 유지 */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .icon-image {
+        width: 350px;
+        height: auto;
+    }
+}
+
+/* 전체 폰트 커짐 */
+h1, h2, h3, p, li, a, span, button, input, textarea {
+    font-size: 1.5rem;
+}
+
 
 /*------------------------스킬 section-------------------*/
 
@@ -201,11 +268,12 @@ body {
 
 .icon-image {
     width: 93%;
+    height: auto;
     max-width: 100%;
     /*margin-left: 10rem;*/
-    margin: 0 0 6rem 8rem ;
+    /*margin: 0 0 6rem 8rem ;*/
 
-    height: auto;
+    /*height: auto;*/
     /*object-fit: contain;*/
 }
 

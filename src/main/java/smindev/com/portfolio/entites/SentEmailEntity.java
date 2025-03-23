@@ -5,6 +5,9 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
+import java.util.Date;
+
 @Entity
 @Table(schema = "portfolio" ,name ="sent_email" )
 @Getter
@@ -23,6 +26,17 @@ public class SentEmailEntity {
 
     @Column(name = "content")
     private String content;
+
+    @Column(name = "sent_time")
+    private LocalDateTime sentTime;
+
+    public LocalDateTime getSentTime() {
+        return sentTime;
+    }
+
+    public void setSentTime(LocalDateTime sentTime) {
+        this.sentTime = sentTime;
+    }
 
     public String getContent() {
         return content;

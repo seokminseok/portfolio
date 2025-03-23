@@ -1,209 +1,221 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>이석민 포토폴리오</title>
+    <!doctype html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>이석민 포토폴리오</title>
 
-    <link type="text/css" rel="stylesheet" href="/assets/styles/page.css">
-    <script defer src="/assets/scripts/index.js"></script>
-</head>
-<body>
+        <link type="text/css" rel="stylesheet" href="/assets/styles/page.css">
+        <script defer src="/assets/scripts/index.js"></script>
+    </head>
+    <body>
 
-<section class="header-box" id="header">
-    <div class="header-text-title"><a href="#middle">Home</a></div>
-    <div class="stretch"></div>
-    <div class="header-text"><a href="#about">About</a></div>
-    <div class="header-text"><a href="#project">Project</a></div>
-    <div class="header-text"><a href="#contact">Contact</a></div>
-</section>
+    <section class="header-box" id="header">
+        <div class="header-text-title"><a href="#middle">Home</a></div>
+        <div class="stretch"></div>
 
-<section class="middle-box" id="middle">
-    <div class="middle-text">
-        <h1>
-            <span class="color-text">Hello, I'm</span><br>
-            <span class="event-text" id="dynamic-text"></span>
-        </h1>
-        <p class="p">안녕하세요 . 성장과 혁신을 지향하는 개발자, 이석민입니다.</p>
-    </div>
-    <img src="/assets/photo/2.jpg" alt="my-image" class="my-image">
-</section>
-
-<section class="skills-section" id="skill">
-    <h2 class="about">SKILLS</h2>
-    <div class="skills-container">
-        <!-- Frontend Section -->
-        <div class="skill-card">
-            <h3>Frontend</h3>
-            <div class="skill-item">
-                <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML" class="skill-icon">
-                <p>HTML</p>
-            </div>
-            <div class="skill-item">
-                <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS" class="skill-icon">
-                <p>CSS</p>
-            </div>
-            <div class="skill-item">
-                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript" class="skill-icon">
-                <p>JavaScript</p>
-            </div>
+        <!-- 햄버거 메뉴 버튼 -->
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
 
-        <!-- Backend Section -->
-        <div class="skill-card">
-            <h3>Backend</h3>
-            <div class="skill-item">
-                <img src="https://cdn-icons-png.flaticon.com/512/919/919854.png" alt="Java" class="skill-icon">
-                <p>Java</p>
-            </div>
-            <div class="skill-item">
-                <img src="https://img.icons8.com/color/48/spring-logo.png" alt="Spring Boot" class="skill-icon">
-                <p>Spring Boot</p>
-            </div>
+        <!-- 전체 메뉴 묶음 -->
+        <div class="nav-links" id="menu">
+            <div class="header-text"><a href="#about">About</a></div>
+            <div class="header-text"><a href="#project">Project</a></div>
+            <div class="header-text"><a href="#contact">Contact</a></div>
         </div>
+    </section>
 
-        <!-- Database Section -->
-        <div class="skill-card">
-            <h3>Database</h3>
-            <div class="skill-item">
-                <img src="https://cdn-icons-png.flaticon.com/512/528/528260.png" alt="MariaDB" class="skill-icon">
-                <p>MariaDB</p>
-            </div>
+    <section class="middle-box" id="middle">
+        <div class="middle-text">
+            <h1>
+                <span class="color-text">Hello, I'm</span><br>
+                <span class="event-text" id="dynamic-text"></span>
+            </h1>
+            <p class="p">안녕하세요 . 성장과 혁신을 지향하는 개발자, 이석민입니다.</p>
         </div>
+        <img src="/assets/photo/2.jpg" alt="my-image" class="my-image">
+    </section>
 
-        <!-- OS Section -->
-        <div class="skill-card">
-            <h3>Operating System</h3>
-            <div class="skill-item">
-                <img src="https://cdn-icons-png.flaticon.com/512/226/226772.png" alt="Linux" class="skill-icon">
-                <p>Linux</p>
-            </div>
-        </div>
-    </div>
-</section>
 
-<section class="about-section" id="about">
-    <h2 class="about">About Me</h2>
-    <div class="about-content">
-        <div class="about-icon">
-            <img src="/assets/photo/icon.png" alt="icon" class="icon-image">
-        </div>
-        <div class="text-section">
-            <ul class="about-list">
-                <li class="about-text">
-                    <span class="bullet">✓</span>BE Enginner 지만 FE를 지향하려고 해요.
-                </li>
-                <li class="about-text">
-                    <span class="bullet">✓</span> 코드의 가독성을 최우선으로 생각하며 개발해요.
-                </li>
-                <li class="about-text">
-                    <span class="bullet">✓</span> 문제 해결을 위한 효율적인 알고리즘을 선택해요.
-                </li>
-                <li class="about-text">
-                    <span class="bullet">✓</span> 지속적인 학습과 기술 트렌드를 따라가며 발전해요.
-                </li>
-            </ul>
-
-            <div class="event">
-                <div class="container">
-                    <label class="action">
-                        <input id="career-radio" name="action-text" type="radio" value="career" class="radio">
-                        <span class="text">Careers</span>
-                        <div class="underline"></div>
-                    </label>
-                    <label class="action">
-                        <input id="education-radio" name="action-text" type="radio" value="education" class="radio">
-                        <span class="text">Education</span>
-                        <div class="underline"></div>
-                    </label>
+    <section class="skills-section" id="skill">
+        <h2 class="about">SKILLS</h2>
+        <div class="skills-container">
+            <!-- Frontend Section -->
+            <div class="skill-card">
+                <h3>Frontend</h3>
+                <div class="skill-item">
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML" class="skill-icon">
+                    <p>HTML</p>
                 </div>
-                <div class="content-container">
-                    <label class="content" id="career-content">
-                        <input type="text" class="comment-container" value="2020.01.16 ~ 2023.12.31  |  (주) 명성"
-                               readonly>
-                    </label>
-                    <label class="content" id="education-content" style="display: none;">
-                        <input type="text" class="comment-container"
-                               value="2024.08.30 ~ 2025.01.20     |   임베디드 소프트웨어 융합 풀스택 개발자 양성 과정" readonly>
-                    </label>
+                <div class="skill-item">
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS" class="skill-icon">
+                    <p>CSS</p>
+                </div>
+                <div class="skill-item">
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript" class="skill-icon">
+                    <p>JavaScript</p>
+                </div>
+            </div>
+
+            <!-- Backend Section -->
+            <div class="skill-card">
+                <h3>Backend</h3>
+                <div class="skill-item">
+                    <img src="https://cdn-icons-png.flaticon.com/512/919/919854.png" alt="Java" class="skill-icon">
+                    <p>Java</p>
+                </div>
+                <div class="skill-item">
+                    <img src="https://img.icons8.com/color/48/spring-logo.png" alt="Spring Boot" class="skill-icon">
+                    <p>Spring Boot</p>
+                </div>
+            </div>
+
+            <!-- Database Section -->
+            <div class="skill-card">
+                <h3>Database</h3>
+                <div class="skill-item">
+                    <img src="https://cdn-icons-png.flaticon.com/512/528/528260.png" alt="MariaDB" class="skill-icon">
+                    <p>MariaDB</p>
+                </div>
+            </div>
+
+            <!-- OS Section -->
+            <div class="skill-card">
+                <h3>Operating System</h3>
+                <div class="skill-item">
+                    <img src="https://cdn-icons-png.flaticon.com/512/226/226772.png" alt="Linux" class="skill-icon">
+                    <p>Linux</p>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<h2 class="about" id="project">My Project</h2>
-<section class="project-section">
-    <div class="project-container">
-        <div class="project-image">
-            <img src="/assets/photo/project.png" alt="소개" class="project-img">
+    <section class="about-section" id="about">
+        <h2 class="about">About Me</h2>
+        <div class="about-content">
+            <div class="about-icon">
+                <img src="/assets/photo/icon.png" alt="icon" class="icon-image">
+            </div>
+            <div class="text-section">
+                <ul class="about-list">
+                    <li class="about-text">
+                        <span class="bullet">✓</span>BE Enginner 지만 FE를 지향하려고 해요.
+                    </li>
+                    <li class="about-text">
+                        <span class="bullet">✓</span> 코드의 가독성을 최우선으로 생각하며 개발해요.
+                    </li>
+                    <li class="about-text">
+                        <span class="bullet">✓</span> 문제 해결을 위한 효율적인 알고리즘을 선택해요.
+                    </li>
+                    <li class="about-text">
+                        <span class="bullet">✓</span> 지속적인 학습과 기술 트렌드를 따라가며 발전해요.
+                    </li>
+                </ul>
+
+                <div class="event">
+                    <div class="container">
+                        <label class="action">
+                            <input id="career-radio" name="action-text" type="radio" value="career" class="radio">
+                            <span class="text">Careers</span>
+                            <div class="underline"></div>
+                        </label>
+                        <label class="action">
+                            <input id="education-radio" name="action-text" type="radio" value="education" class="radio">
+                            <span class="text">Education</span>
+                            <div class="underline"></div>
+                        </label>
+                    </div>
+                    <div class="content-container">
+                        <label class="content" id="career-content">
+                            <input type="text" class="comment-container" value="2020.01.16 ~ 2023.12.31  |  (주) 명성"
+                                   readonly>
+                        </label>
+                        <label class="content" id="education-content" style="display: none;">
+                            <input type="text" class="comment-container"
+                                   value="2024.08.30 ~ 2025.01.20     |   임베디드 소프트웨어 융합 풀스택 개발자 양성 과정" readonly>
+                        </label>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="project-details">
-            <h2 class="project-title">축제 정보 제공 플랫폼</h2>
-            <p>축제 정보 제공과 후기를 남기는 사이트입니다.</p>
-            <p>게시글 작성, 댓글 작성, 찜하기 기능을 제공하여 사용자가 축제 정보를 상호작용할 수 있도록 합니다.</p>
-            <p>게시글과 댓글 신고 기능, Q&A 게시판과 알림 기능을 통해 실시간 소통을 지원합니다.</p>
-            <p>사용자 맞춤형 기능을 제공하여 개인화된 축제 정보를 제공합니다.</p>
-                <a href="https://github.com/seokminseok/project" target="_blank"><img width="48" height="48" src="https://img.icons8.com/material-rounded/48/github.png" alt="github"/></a>
-            <a href="https://fave.smindev.com">
-            <img width="50" height="50" src="https://img.icons8.com/ios/50/link--v1.png" alt="link--v1"/>
-            </a>
+    </section>
+
+    <h2 class="about" id="project">My Project</h2>
+    <section class="project-section">
+        <div class="project-container">
+            <div class="project-image">
+                <img src="/assets/photo/project.png" alt="소개" class="project-img">
+            </div>
+            <div class="project-details">
+                <h2 class="project-title">축제 정보 제공 플랫폼</h2>
+                <p>축제 정보 제공과 후기를 남기는 사이트입니다.</p>
+                <p>게시글 작성, 댓글 작성, 찜하기 기능을 제공하여 사용자가 축제 정보를 상호작용할 수 있도록 합니다.</p>
+                <p>게시글과 댓글 신고 기능, Q&A 게시판과 알림 기능을 통해 실시간 소통을 지원합니다.</p>
+                <p>사용자 맞춤형 기능을 제공하여 개인화된 축제 정보를 제공합니다.</p>
+                    <a href="https://github.com/seokminseok/project" target="_blank"><img width="48" height="48" src="https://img.icons8.com/material-rounded/48/github.png" alt="github"/></a>
+                <a href="https://fave.smindev.com">
+                <img width="50" height="50" src="https://img.icons8.com/ios/50/link--v1.png" alt="link--v1"/>
+                </a>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
 
-<h2 class="about" id="contact">Contact</h2>
-<section class="contact-section" >
-    <div class="contact">
-        <p>📞 010-3444-7689</p>
-        <p>✉️ dltjrals1018@naver.com</p>
-    </div>
-    <div class="form-container">
-        <form action="/mail/send" method="post">
-            <label>
-                <span class="input-text">Name</span>
-                <input type="text" name="name" placeholder="성함을 입력해 주세요!" required />
-            </label>
-            <label>
-                <span class="input-text">Email</span>
-                <input type="email" name="email" placeholder="이메일을 입력해 주세요!" required />
-            </label>
-            <label>
-                <span class="input-text">Content</span>
-                <textarea name="content" placeholder="내용을 입력해 주세요!" required></textarea>
-            </label>
-            <button type="submit">Send</button>
-        </form>
-    </div>
-</section>
-
-
-<section>
-    <div class="icon-container">
-        <div class="icons">
-            <!-- GitHub -->
-            <a href="https://github.com/seokminseok" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub">
-            </a>
-            <!-- Notion -->
-            <a href="https://chalk-jonquil-2ab.notion.site/11162de1c7f180d9b3acdb0484a21ffc" target="_blank">
-                <img src="/assets/photo/Notion-removebg-preview.png" alt="Notion">
-            </a>
-            <!-- Tistory -->
-            <!--            <a href="https://my-ai.tistory.com/" target="_blank">-->
-            <!--                <img src="https://t1.daumcdn.net/tistory_admin/static/top/favicon_0630.ico" alt="Tistory">-->
-            <!--            </a>-->
+    <h2 class="about" id="contact">Contact</h2>
+    <section class="contact-section" >
+        <div class="contact">
+            <p>📞 010-3444-7689</p>
+            <p>✉️ dltjrals1018@naver.com</p>
         </div>
+        <div class="form-container">
+            <form action="/mail/send" method="post">
+                <label>
+                    <span class="input-text">Name</span>
+                    <input type="text" name="name" placeholder="성함을 입력해 주세요!" required />
+                </label>
+                <label>
+                    <span class="input-text">Email</span>
+                    <input type="email" name="email" placeholder="이메일을 입력해 주세요!" required />
+                </label>
+                <label>
+                    <span class="input-text">Content</span>
+                    <textarea name="content" placeholder="내용을 입력해 주세요!" required></textarea>
+                </label>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="icon-container">
+            <div class="icons">
+                <!-- GitHub -->
+                <a href="https://github.com/seokminseok" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub">
+                </a>
+                <!-- Notion -->
+                <a href="https://chalk-jonquil-2ab.notion.site/11162de1c7f180d9b3acdb0484a21ffc" target="_blank">
+                    <img src="/assets/photo/Notion-removebg-preview.png" alt="Notion">
+                </a>
+                <!-- Tistory -->
+                <!--            <a href="https://my-ai.tistory.com/" target="_blank">-->
+                <!--                <img src="https://t1.daumcdn.net/tistory_admin/static/top/favicon_0630.ico" alt="Tistory">-->
+                <!--            </a>-->
+            </div>
+        </div>
+    </section>
+
+    <div class="under">
+        <p> © 2025. Lee Seok Min. All rights reserved.</p>
     </div>
-</section>
 
-<div class="under">
-    <p> © 2024. Lee Seok Min. All rights reserved.</p>
-</div>
-
-</body>
-</html>
+    </body>
+    </html>

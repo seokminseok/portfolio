@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // ✅ 1. 타이핑 효과
     const textArray = ["B.E Engineer", "Seok Min"];
     const dynamicText = document.getElementById("dynamic-text");
+    dynamicText.style.minWidth = '12ch';
     let currentIndex = 0;
     let currentCharIndex = 0;
     let currentText = "";
@@ -8,100 +10,82 @@ document.addEventListener("DOMContentLoaded", function () {
     function type() {
         if (currentCharIndex < textArray[currentIndex].length) {
             currentText += textArray[currentIndex].charAt(currentCharIndex);
-            dynamicText.innerHTML = currentText;
+            dynamicText.textContent = currentText;
             currentCharIndex++;
-            setTimeout(type, 100); // 글자가 나타나는 속도
+            setTimeout(type, 100);
         } else {
-            setTimeout(erase, 1000); // 글자가 나타난 후 대기
+            setTimeout(erase, 1000);
         }
     }
 
     function erase() {
         if (currentCharIndex > 0) {
             currentText = currentText.slice(0, -1);
-            dynamicText.innerHTML = currentText;
+            dynamicText.textContent = currentText;
             currentCharIndex--;
-            setTimeout(erase, 100); // 글자가 지워지는 속도
+            setTimeout(erase, 100);
         } else {
-            currentIndex = (currentIndex + 1) % textArray.length; // 다음 텍스트로 변경
-            setTimeout(type, 500); // 다음 텍스트를 입력하기 전 대기
+            currentIndex = (currentIndex + 1) % textArray.length;
+            setTimeout(type, 500);
         }
     }
+    type();
 
-    type(); // 첫 번째 텍스트 입력 시작
+    // ✅ 2. 라디오 버튼 토글
+    const careerRadio = document.getElementById("career-radio");
+    const educationRadio = document.getElementById("education-radio");
+    const careerContent = document.getElementById("career-content");
+    const educationContent = document.getElementById("education-content");
 
-});
-{
-    document.addEventListener("DOMContentLoaded", function () {
-        // Radio 버튼 클릭 시 이벤트 처리
-        const careerRadio = document.getElementById("career-radio");
-        const educationRadio = document.getElementById("education-radio");
-        const certificationRadio = document.getElementById("certification-radio")
-        const careerContent = document.getElementById("career-content");
-        const educationContent = document.getElementById("education-content");
-        const certificationContent = document.getElementById("certification-content")
+    function toggleContent() {
+        careerContent.style.display = careerRadio.checked ? "block" : "none";
+        educationContent.style.display = educationRadio.checked ? "block" : "none";
+    }
+    toggleContent();
 
+    careerRadio.addEventListener("click", toggleContent);
+    educationRadio.addEventListener("click", toggleContent);
 
-        function toggleContent() {
-            // careerRadio 선택 시 careerContent만 표시하고, educationContent 숨김
-            if (careerRadio.checked) {
-                careerContent.style.display = "block";
-                educationContent.style.display = "none";
+    // ✅ 3. 메일 전송
+    const form = document.querySelector('form');
+    if (form) {
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
 
-            }
-            // educationRadio 선택 시 educationContent만 표시하고, careerContent 숨김
-            if (educationRadio.checked) {
-                educationContent.style.display = "block";
-                careerContent.style.display = "none";
-            }
-        }
-
-        // 페이지 로딩 시 첫 번째 라디오 버튼 상태로 초기화
-        toggleContent();
-
-        // 각 radio 버튼에 클릭 이벤트 추가
-        careerRadio.addEventListener("click", toggleContent);
-        educationRadio.addEventListener("click", toggleContent);
-    });
-    document.addEventListener('DOMContentLoaded', () => {
-        const form = document.querySelector('form');
-        if (form) {
-            form.addEventListener('submit', function (event) {
-                event.preventDefault();
-
-                const formData = new FormData(form);
-
-                fetch('/mail/send', {
-                    method: 'POST',
-                    body: formData,
+            const formData = new FormData(form);
+            fetch('/mail/send', {
+                method: 'POST',
+                body: formData,
+            })
+                .then(response => response.json())
+                .then(() => {
+                    alert("전송에 성공 했습니다 감사합니다!");
+                    location.reload();
                 })
-                    .then(response => response.json())
-                    .then(data => {
-                        alert("전송에 성공 했습니다 감사합니다!");
-                       location.href = location.href;
-                    })
-                    .catch(error => {
-                        console.error('Error:', error);
-                    });
-            });
-        } else {
-            console.error('폼을 찾을 수 없습니다.');
-        }
-    });
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        });
+    }
+
+    // ✅ 4. 프로젝트 smooth scroll
     document.querySelectorAll('a[href="#project"]').forEach(link => {
         link.addEventListener('click', function (event) {
-            event.preventDefault(); // 기본 동작 방지
-
+            event.preventDefault();
             const target = document.querySelector('#project');
             if (target) {
                 target.scrollIntoView({
-                    behavior: 'smooth', // 부드럽게 스크롤
-                    block: 'center',    // 스크롤 기준: 화면 중앙에 맞춤
+                    behavior: 'smooth',
+                    block: 'center',
                 });
             }
         });
     });
 
-}
-
-
+    // ✅ 5. 햄버거 메뉴 토글
+    const menuToggle = document.getElementById('menuToggle');
+    const menu = document.getElementById('menu');
+    menuToggle.addEventListener('click', () => {
+        menu.classList.toggle('show');
+    });
+});

@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import smindev.com.portfolio.entites.SentEmailEntity;
 import smindev.com.portfolio.repository.SentEmailRepository;
 
+import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -31,6 +32,7 @@ public class EmailController {
     @PostMapping("/mail/send")
     public ResponseEntity<?> sendEmail(@ModelAttribute SentEmailEntity email) {
         try {
+            email.setSentTime(LocalDateTime.now());
             // 이메일 메시지 생성
             SimpleMailMessage message = new SimpleMailMessage();
             message.setTo("dltjrals1018@gmail.com"); // 수신자 이메일
